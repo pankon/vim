@@ -1,0 +1,59 @@
+vim training 1: https://danielmiessler.com/study/vim/#why
+
+(Remembering your language)
+
+(Basic change/insert operations)
+
+i   : insert before the cursor
+a   : append after the cursor
+l   : insert at the beginning of the line
+A   : append a th end of the line
+o   : open a new line below the current one
+O   : open a new line above the current one
+r   : replace the one character under your cursor
+R   : replace the one character under your cursor, but just keep typing afterwards
+cm  : change whatever you define as a movement, e.g. a word, or a sentence, or a paragraph.
+C   : change the current line from where you're at
+ct? : change up to the question mark
+s   : substitute from where you are to the nexxt command (noun)
+S   : substitute the entire current line
+
+Examples:
+cis : change inside sentence
+l   : go to the beginning of the line and enter insert mode (didn't work)
+a   : start typing right after the cursor
+C   : delete the line from where you're at, and enter insert mode
+S   : delete the entire line you're on, and enter insert mode
+
+(Changing case)
+~   : that's it
+
+(Formatting text)
+gq ap   : format the current paragraph (ap is the standard around paragraph text object)
+
+(Deleting text)
+x   : exterminate (delete) the char under the cursor
+X   : exterminate (delete) the char before the cursor
+dm  : delete whatever you define as a movement (word, sentence, paragraph)
+dd  : delete the current line
+dt. : delete from where you are to the period
+D   : delete to the end of the line
+J   : join the current line with the next one (delete what's in between)
+
+(Undo and redo)
+u       : undo last action
+Ctrl-r  : redo
+
+(Repeating actions)
+.       : repeat whatever you just did
+&       : repeats last "ex" command
+
+ex:
+dw      : delete word
+5.      : delete five more words
+
+(Copying - a little different)
+y       : yank - copy whatever's selected
+yy      : yank the current line
+
+

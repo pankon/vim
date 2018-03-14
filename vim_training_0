@@ -1,0 +1,86 @@
+vim quick quide
+
+(verbs)
+d: delete
+c: change
+y: yank (copy)
+v: visual select (V for line vs character)
+
+
+(Modifiers)
+i: inside
+a: around
+NUM: number (e.g.: 1, 2, 10)
+t: searches for something and stops before it
+f: searches for that thing and lands on it
+/: find a string (literal or regex)
+
+(Nouns)
+w: word
+s: sentence
+): sentence (another way of doing it)
+p: paragraph
+}: paragraph (another way of doing it
+t: tag (think HTML/XML)
+b: block (programming use)
+
+Putting it together:
+d2w : delete 2 words
+cis : change inside sentence
+yip : yank inside paragraph (copy the paragraph you're in)
+ct< : change to open bracket (change the text from where you are to the next open bracket)
+
+Working with your file:
+vi file : open your file in vim
+:w      : write your changes to the file
+:q!     : quit, but without saving changes (!)
+:wq     : write your changes and exit vim
+:saveas ~/some/path/ : save your file to that location 
+ZZ      : faster way to to :wq
+
+Searching: 
+/include<CR> and press ENTER    : search "include" with (CR-line terminator)
+t       : jump up to a character (haven't been able to get this to work)
+f       : jump onto a char
+n       : next result
+;       : goto next instance when you've jumped to a character
+,       : goto prev instance when you've jumped to a character
+
+Moving around:
+j       : move down one line
+k       : move up one line
+h       : move left one char
+l       : move right one char
+O       : move to begin of line
+$       : move to end of line
+^       : move to first non-blank char in line
+t"      : jump to right before the next quotes
+f"      : jump and land on next quotes
+w       : move forward one word
+b       : move back one word
+e       : move to the end of your word
+W       : move forward one big word
+B       : move back one big word
+)       : move forward one sentence
+}       : move forward one paragraph
+H       : move to top of screen
+M       : move to middle of screen
+L       : move to bottom of screen
+gg      : goto top of file
+G       : goto bottom of file
+^U      : move up half a screen
+^D      : move down half a screen
+^F      : page down
+^B      : page up
+Ctrl-i  : jump to prev. navigation locaiton
+Ctrl-o  : jump back to where you were
+:$line_numberH : move to a given line number
+
+Changing modes:
+Insert > Command(Normal) : <ESC>
+Command(Normal) > Insert : i, a, I, A
+Command > Visual         : v, V, <Ctrl>-v
+Visual > Command         : <ESC>
+
+N       : prev result
+
